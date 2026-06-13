@@ -16,6 +16,14 @@ class Booking(models.Model):
         on_delete=models.CASCADE
     )
 
+    contract_sent = models.BooleanField(
+        default=False
+    )
+
+    contract_signed = models.BooleanField(
+        default=False
+    )
+
     created_at = models.DateTimeField(
         auto_now_add=True
     )
