@@ -14,6 +14,8 @@ def send_booking_notification(booking):
 
         <p><strong>Guest Email:</strong> {booking.email}</p>
         <p><strong>Property:</strong> {booking.property.name}</p>
+        <p><strong>Contract Sent:</strong> {booking.contract_sent}</p>
+        <p><strong>Contract Signed:</strong> {booking.contract_signed}</p>
         <p><strong>Submitted:</strong> {booking.created_at}</p>
         """
     })
