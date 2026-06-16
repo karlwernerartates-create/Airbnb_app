@@ -1,19 +1,97 @@
-<h1>Create Booking</h1>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Airbnb Booking</title>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .booking-card {
+        background: white;
+        padding: 30px;
+        width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #1d4ed8;
+    }
+</style>
+
+
+</head>
+<body>
+
+<div class="booking-card">
+    <h1>Airbnb Booking</h1>
+
 
 <form method="POST">
-  {% csrf_token %}
+    {% csrf_token %}
 
-  <label>Email</label>
-  <input type="email" name="email" required />
+    <label>Email Address</label>
+    <input type="email" name="email" required />
 
-  <label>Property</label>
-  <select name="property_id">
-    {% for property in properties %}
-      <option value="{{ property.id }}">
-        {{ property.name }}
-      </option>
-    {% endfor %}
-  </select>
+    <label>Property</label>
+    <select name="property_id" required>
+        {% for property in properties %}
+            <option value="{{ property.id }}">
+                {{ property.name }}
+            </option>
+        {% endfor %}
+    </select>
 
-  <button type="submit">Submit</button>
+    <button type="submit">Submit Booking</button>
 </form>
+
+
+</div>
+
+</body>
+</html>
