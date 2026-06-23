@@ -30,8 +30,9 @@ ALLOWED_HOSTS = [ ".up.railway.app",
     "127.0.0.1"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://airbnbapp-production.up.railway.app",
+     "https://*.up.railway.app",
 ]
+
 
 
 # Application definition
