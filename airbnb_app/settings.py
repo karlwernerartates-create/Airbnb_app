@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-91@7ckx654ju$lb=-pv4y1jefn@2_-^2r+&4$ij$8860-o^ig&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["airbnbapp-production.up.railway.app",
     "localhost",
