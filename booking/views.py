@@ -8,12 +8,11 @@ def create_booking(request):
         email = request.POST.get("email")
         property_id = request.POST.get("property_id")
 
-        property_obj = get_object_or_404(Property, id=property_id)
+        print("Properties:", list(properties.values()))
 
-        booking = Booking.objects.create(
-            email=email,
-            property=property_obj
-        )
+        return render(request, "booking/create_booking.html", {
+        "properties": properties
+    })
 
         # send email to YOU (admin)
         send_admin_notification(booking)
