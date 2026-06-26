@@ -4,6 +4,11 @@
 <head>
     <title>Airbnb Booking</title>
 
+           <h2>Debug</h2>
+           <pre>{{ debug }}</pre>
+
+           <p>Properties length: {{ properties|length }}</p>
+
 
 <style>
     body {
@@ -88,6 +93,9 @@
             {{ property.name }}
         </option>
     {% endfor %}
+    
 </select>
     <button type="submit">Submit Booking</button>
 </form>
+
+
