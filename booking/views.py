@@ -27,7 +27,9 @@ def create_booking(request):
     return render(
         request,
         "booking/create_booking.html",
-        {"properties": properties}
+        {
+            "properties": properties
+        }
     )
 
 
